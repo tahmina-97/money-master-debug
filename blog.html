@@ -24,11 +24,28 @@
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
                 aria-labelledby="panelsStayOpen-headingOne">
                 <div class="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
-                    plugin adds the appropriate classes that we use to style each element. These classes control the
-                    overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
-                    this with custom CSS or overriding our default variables. It's also worth noting that just about any
-                    HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    <strong>sessionStorage is similar to localStorage;</strong> the difference is that while data in
+                    localStorage doesn't expire, data in sessionStorage is cleared when the page session ends. Whenever
+                    a document is loaded in a particular tab in the browser, a unique page session gets created and
+                    assigned to that particular tab. <br>
+                    <code>Local Storage:</code> This read-only interface property provides access to the Document’s
+                    local storage
+                    object, the stored data is stored across browser sessions. Similar to sessionStorage, except that
+                    localStorage data gets cleared when the page session ends – that is when the page is closed. It is
+                    cleared when the last “private” tab of a browser is closed (localStorage data for a document loaded
+                    in a private browsing or incognito session). <br>
+                    <code>Session Storage:</code> Session Storage objects can be accessed using the sessionStorage
+                    read-only property.
+                    A unique page session gets created once a document is loaded in a browser tab. Page sessions are
+                    valid for only one tab at a time. Pages are only saved for the amount of time that the tab or the
+                    browser is open; they do not persist after the page reloads and restores. A new session is created
+                    each time a tab or window is opened; this is different from session cookies. Each tab/window that is
+                    opened with the same URL creates its own sessionStorage.When you duplicate a tab, the sessionStorage
+                    from the original tab is copied to the duplicated tab. Closing a window/tab ends the session and
+                    clears sessionStorage objects. <br>
+                    <code>Both Storages have 4 methods:</code> setItem(), getIteam(), removeItem(), clear().
+
+
                 </div>
             </div>
         </div>
@@ -43,12 +60,19 @@
             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                 aria-labelledby="panelsStayOpen-headingTwo">
                 <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
+                    <strong>Global Scope:</strong> The variables defined outside of any
+                    function or curly brackets are known as global variables and have global scope. Global scope means
+                    that the variables can be accessed from any part of that program, any function or conditional state
+                    can access that variable. Global scope is the entire Javascript execution environment. Any variables
+                    assigned without an explicit scope (using the var, let, or const keywords) automatically become
+                    global variables. <br>
+                    <strong>Block Scope:</strong> Block scope is a sub-type of local scope.A block scoped variable means
+                    that the variable defined within a block will not be accessible from outside the block. A block can
+                    reside inside a function, and a block scoped variable will not be available outside the block even
+                    if the block is inside a function. The block scope can be
+                    defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be
+                    of loops, or conditional statements, or something else. You are only allowed to refer to these
+                    variables from within the curly brackets {}.
                 </div>
             </div>
         </div>
@@ -63,12 +87,34 @@
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
                 aria-labelledby="panelsStayOpen-headingThree">
                 <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
+                    <strong>JavaScript has a runtime model based on
+                        an event loop,</strong> which is responsible for executing the code, collecting and processing
+                    events, and
+                    executing queued sub-tasks. This model is quite different from models in other languages like C and
+                    Java. <br>
+                    The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all
+                    operations on a single thread, but using a few smart data structures, it gives us the illusion of
+                    multi-threading. <br> The <code>call stack</code> is responsible for keeping track of all the
+                    operations in line
+                    to be executed. Whenever a function is finished, it is popped from the stack. <br>
+                    The <code>event queue</code> is responsible for sending new functions to the stack for processing.
+                    It follows the queue data structure to maintain the correct sequence in which all operations should
+                    be sent for execution. <br>
+                    Whenever an async function is called, it is sent to a browser API. These are APIs built into the
+                    browser. Based on the command received from the call stack, the API starts its own single-threaded
+                    operation.
+
+                    An example of this is the setTimeout method. When a setTimeout operation is processed in the stack,
+                    it is sent to the corresponding API which waits till the specified time to send this operation back
+                    in for processing.
+
+                    Where does it send the operation? The event queue. Hence, we have a cyclic system for running async
+                    operations in JavaScript. The language itself is single-threaded, but the browser APIs act as
+                    separate threads.
+
+                    The event loop facilitates this process; it constantly checks whether or not the call stack is
+                    empty. If it is empty, new functions are added from the event queue. If it is not, then the current
+                    function call is processed.
                 </div>
             </div>
         </div>
@@ -83,12 +129,28 @@
             <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
                 aria-labelledby="panelsStayOpen-headingFour">
                 <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
+                    <strong>An undefined variable or anything without a value will always return "undefined" in
+                        JavaScript.</strong> This
+                    is not the same as null, despite the fact that both imply an empty state.
+                    It is a property of the global
+                    object. That is, it is a variable in global scope. The initial value of undefined is
+                    the primitive
+                    value undefined. It Can happen for many reasons. Some are given below: <br>
+                    <ul>
+                        <li>
+                            When a variable is declared or initialized but no value is assigned to it, JavaScript
+                            automatically displays "undefined".
+                        </li>
+                        <li>Also, when you try accessing values in, for example, an array or object that doesn’t exist,
+                            it will throw undefined</li>
+                        <li>Function which has no return</li>
+                        <li>Parameter that is not passed will cause undefined</li>
+                        <li>If return has nothing on the right side will return undefined</li>
+                        <li>Accessing array elements outside the index range</li>
+                        <li>Deleting an element inside an array</li>
+                        <li>Set a value directly to undefined</li>
+                    </ul>
+
                 </div>
             </div>
         </div>
